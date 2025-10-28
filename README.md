@@ -1,1 +1,1 @@
-# trendey
+# trendy
