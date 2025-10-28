@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendyShop | Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="cart">
+      <span id="cart-count">0</span>
+      <div class="cart-icon">🛒</div>
+    </div>
+    <div class="logo">
+      <span style="text-decoration: underline; text-decoration-color:#ff5733;text-decoration-thickness: 3px;">Trendy</span>
+      <span class="sh">Shop</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cart Sidebar -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p class="total">Total: Ksh.<span id="cart-total">0</span></p>
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+    <button id="close-cart">Close</button>
+  </div>
+
+  <div id="overlay"></div>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h2 class="section-title">All Products</h2>
+
+    <div class="product-grid">
+      <!-- Row 1 -->
+      <div class="product-card">
+        <img src="headphones.jpg" alt="Wireless Headphones">
+        <h3>Wireless Headphones</h3>
+        <p class="price">Ksh 1199</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="smart watch.jpg" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p class="price">Ksh 899</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="bt speaker.jpg" alt="Bluetooth Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">Ksh 1499</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="product-card">
+        <img src="phonecase.jpg">
+        <h3>Phone Case</h3>
+        <p class="price">Ksh 299</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="earbuds.jpg" alt="Earbuds<br>"Tozo"">
+        <h3>Earbuds</h3>
+        <p class="price">Ksh 799</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="jbl speaker.jpg">
+        <h3>JBL Speaker.jpg</h3>
+        <p class="price">Ksh 8499</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="oraimo.jpg">
+        <h3>Oraimo Earbuds</h3>
+        <p class="price">Ksh 2999</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+
+
+      <div class="product-card">
+        <img src="power bank.jpg" alt="Power Bank">
+        <h3>Power Bank</h3>
+        <p class="price">Ksh 1199</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

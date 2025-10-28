@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendyShop | Checkout</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span style="text-decoration: underline; text-decoration-color:#ff5733;text-decoration-thickness: 3px;">Trendy</span>
+      <span class="sh">Shop</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="checkout.html" class="active">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Checkout Section -->
+  <section class="checkout">
+    <h2>Checkout</h2>
+
+    <div class="checkout-container">
+      <div class="order-summary">
+        <h3>Your Order</h3>
+        <ul id="checkout-items"></ul>
+        <p class="checkout-total">Total: Ksh.<span id="checkout-total">0</span></p>
+      </div>
+
+      <div class="checkout-form">
+        <h3>Customer Information</h3>
+        <form id="order-form">
+          <label>Full Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+
+          <label>Delivery Address</label>
+          <textarea id="address" placeholder="Enter your delivery address" required></textarea>
+
+          <button type="submit" class="place-order-btn">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Load cart from localStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const itemsList = document.getElementById("checkout-items");
+    const totalEl = document.getElementById("checkout-total");
+    const form = document.getElementById("order-form");
+
+    let total = 0;
+
+    // Render cart items
+    cart.forEach(item => {
+      const li = document.createElement("li");
+      li.innerHTML = `${item.name} - Ksh.${item.price.toLocaleString()} x${item.quantity || 1}`;
+      itemsList.appendChild(li);
+      total += item.price * (item.quantity || 1);
+    });
+
+    totalEl.textContent = total.toLocaleString();
+
+    // Handle order submit
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const address = document.getElementById("address").value;
+
+      if (!name || !email || !address) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Simulate order placement
+      alert(`🎉 Thank you, ${name}! Your order has been placed successfully.`);
+
+      // Clear cart
+      localStorage.removeItem("cart");
+
+      // Redirect to home
+      window.location.href = "index.html";
+    });
+  </script>
+
+</body>
+</html>

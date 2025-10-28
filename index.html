@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendyShop | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+ 
+  <h1 class="logo">ShopSmart</h1>
+  <div class="cart">
+    <span id="cart-count">0</span>
+    <div class="cart-icon">🛒</div>
+  </div>
+
+
+        <div class="logo"><span style="text-decoration: underline; text-decoration-color:#ff5733;text-decoration-thickness: 3px ;">Trendy</span>
+            <span class="sh">Shop</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+   <!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <p class="total">Total: Ksh.<span id="cart-total">0.00</span></p>
+  <button id="close-cart">Close</button>
+</div>
+
+<!-- Overlay (dark background when sidebar is open) -->
+<div id="overlay"></div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Shop the Latest Trends</h1>
+    <p class="typewriter-text">Discover new arrivals and exclusive offers — made just for you.</p>
+    <a href="shop.html" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section class="products">
+  <h2 class="section-title">Featured Products</h2>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="headphones.jpg" >
+      <h3>Wireless Headphones</h3>
+      <p class="price">Ksh 1199</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="smart watch.jpg" >
+      <h3>Smart Watch</h3>
+      <p class="price">Ksh 899</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bt speaker.jpg">
+      <h3>Bluetooth Speaker</h3>
+      <p class="price">Ksh 2499</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
